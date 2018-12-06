@@ -516,7 +516,7 @@ int main(int argc, char** argv)
 
 	// If not set externally, and no debug option was given, use info log level
 	if ((old_dbg_str == NULL) && (!debug_mode))
-		libusb_set_debug(NULL, LIBUSB_LOG_LEVEL_INFO);
+		libusb_set_option(NULL, LIBUSB_OPTION_LOG_LEVEL, LIBUSB_LOG_LEVEL_INFO);
 	if (error_lang != NULL) {
 		r = libusb_setlocale(error_lang);
 		if (r < 0)
